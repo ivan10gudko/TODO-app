@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { getTodos } from "../services/todos.api";
 
 const initialState = {
     items: [],
@@ -12,8 +12,8 @@ export const fetchTodos = createAsyncThunk(
     "todos/fetchTodos",
     async (_, { rejectWithValue }) => {
         try {
-            const res = await axios.get("https://jsonplaceholder.typicode.com/todos");
-            return res.data;
+            const res = await getTodos();
+            return res;
         } catch (err) {
             return rejectWithValue(err.message);
         }
@@ -25,7 +25,7 @@ const todosSlice = createSlice({
     initialState,
     reducers: {
         addTodo: (state, action) => {
-            state.items.unshift(action.payload);
+            state.items.unshift(action.payload);// insert at the beginning of the list so that added tasks are displayed first
         },
         toggleTodo: (state, action) => {
             const todo = state.items.find((t) => t.id === action.payload);
