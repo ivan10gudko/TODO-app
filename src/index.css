@@ -147,7 +147,7 @@ li.task input.edit-title{
 
 .task-sceleton {
     list-style: none;
-    background-color: #e5e7eb; /* gray-200 */
+    background-color: #e5e7eb;
     border-radius: 6px;
     margin: 0.8em 0;
     width: 100%;
@@ -159,9 +159,27 @@ li.task input.edit-title{
 
 @keyframes pulse-color {
     0% {
-        background-color: #e0e7ff; /* indigo-100 */
+        background-color: #e0e7ff;
     }
     100% {
-        background-color: #f3f4f6; /* gray-100 */
+        background-color: #f3f4f6;
     }
+}
+
+.pagination{
+    margin-top:2em;
+}
+.btn-prev ,.btn-next{
+    color:#FAF5FF;
+background: #4F46E5;
+}
+.btn-prev:disabled ,.btn-next:disabled{
+    color:#FAF5FF;
+background: #9D9DA8;
+cursor: not-allowed;
+}
+
+.btn.selected{
+    color:#4F46E5 ;
+    margin: 0 0.2em;
 }
