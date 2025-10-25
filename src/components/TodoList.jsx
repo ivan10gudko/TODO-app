@@ -19,7 +19,9 @@ function TodoList() {
 
 
     useEffect(() => {
+        if (!items || items.length === 0) {
         dispatch(fetchTodos());
+        }
     }, [dispatch]);
 
     return ( <div>
