@@ -20,10 +20,10 @@ yarn install
 
 # 3. Launch the project:
 
-npm start
+npm npm run dev
 
 or
 
 yarn start
 
-# 4. Open in browser: http://localhost:3000
+# 4. Open in browser: http://localhost:5173
