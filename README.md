@@ -6,6 +6,7 @@ React.js TODO App: CRUD, API Integration, Pagination, Redux/LocalStorage
 
 1. Clone the repository:
 git clone [<repository-link>](https://github.com/ivan10gudko/TODO-app)
+
 cd TODO-app
 
 2. Install dependencies:
