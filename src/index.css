@@ -169,9 +169,16 @@ li.task input.edit-title{
 .pagination{
     margin-top:2em;
 }
+
+.pagination .btn:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
 .btn-prev ,.btn-next{
+    padding: 0.8em 1.2em;
     color:#FAF5FF;
-background: #4F46E5;
+    background: #4F46E5;
+    margin: 0 1em;
 }
 .btn-prev:disabled ,.btn-next:disabled{
     color:#FAF5FF;
@@ -180,6 +187,37 @@ cursor: not-allowed;
 }
 
 .btn.selected{
-    color:#4F46E5 ;
-    margin: 0 0.2em;
+    color:#4F46E5;
+}
+
+@media (max-width: 600px) {
+    body{
+        font-size: 14px;
+    }
+    .add-form input[type="submit"]{
+        padding: 0.4em 0.6em;
+        width: 30%;
+    }
+    li.task input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    li.task input.edit-title{
+        padding: 0.2em 1em;
+        width: 80%;
+}
+    li.task .control-buttons{
+        display: flex;
+        gap:0em
+    }
+
+    .btn .icon {
+    width: 12px;
+    height: 12px;
+}
+
+    .btn-prev ,.btn-next{
+    padding: 0.4em 0.6em;
+    margin: 0;
+    }
 }

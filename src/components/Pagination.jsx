@@ -1,4 +1,5 @@
-
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 function Pagination({ currentPage, totalPages, onPageChange, maxButtons = 5 }){
 
     const getPageNumbers = () => {
@@ -32,7 +33,7 @@ function Pagination({ currentPage, totalPages, onPageChange, maxButtons = 5 }){
             onClick={() => onPageChange(currentPage - 1)}
             disabled={currentPage === 1}
         >
-            Prev
+           < ArrowBackIosNewIcon fontSize='sm'/>
         </button>
 
         {/* first page must be always visible*/}
@@ -76,7 +77,7 @@ function Pagination({ currentPage, totalPages, onPageChange, maxButtons = 5 }){
             onClick={() => onPageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
         >
-            Next
+           <ArrowForwardIosIcon fontSize='sm'/>
         </button>
     </div>);
 };
